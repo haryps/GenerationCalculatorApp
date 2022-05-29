@@ -24,8 +24,8 @@ namespace GenerationCalculatorApp
             {
                 double totalGenerationValue = 0;
                 double factor = windGenerator.Location == Location.Offshore
-                    ? ReferenceData.Factors[0].Low
-                    : ReferenceData.Factors[0].High;
+                    ? ReferenceData.Factors.ValueFactor.Low
+                    : ReferenceData.Factors.ValueFactor.High;
                 foreach (Day day in windGenerator.Days)
                 {
                     totalGenerationValue += day.Energy * day.Price * factor;
@@ -37,7 +37,7 @@ namespace GenerationCalculatorApp
             foreach (GasGenerator gasGenerator in GenerationReport.GasGenerators)
             {
                 double totalGenerationValue = 0;
-                double factor = ReferenceData.Factors[0].Medium;
+                double factor = ReferenceData.Factors.ValueFactor.Medium;
                 foreach (Day day in gasGenerator.Days)
                 {
                     totalGenerationValue += day.Energy * day.Price * factor;
@@ -49,7 +49,7 @@ namespace GenerationCalculatorApp
             foreach (CoalGenerator coalGenerator in GenerationReport.CoalGenerators)
             {
                 double totalGenerationValue = 0;
-                double factor = ReferenceData.Factors[0].Medium;
+                double factor = ReferenceData.Factors.ValueFactor.Medium;
                 foreach (Day day in coalGenerator.Days)
                 {
                     totalGenerationValue += day.Energy * day.Price * factor;
@@ -69,7 +69,7 @@ namespace GenerationCalculatorApp
             {
                 foreach (Day day in gasGenerator.Days)
                 {
-                    double emission = day.Energy * gasGenerator.EmissionsRating * ReferenceData.Factors[1].Medium;
+                    double emission = day.Energy * gasGenerator.EmissionsRating * ReferenceData.Factors.EmissionsFactor.Medium;
                     dailyEmissions.Add(new MaxDailyEmission(gasGenerator.Name, day.Date, emission));
                 }
             }
@@ -78,7 +78,7 @@ namespace GenerationCalculatorApp
             {
                 foreach (Day day in coalGenerator.Days)
                 {
-                    double emission = day.Energy * coalGenerator.EmissionsRating * ReferenceData.Factors[1].High;
+                    double emission = day.Energy * coalGenerator.EmissionsRating * ReferenceData.Factors.EmissionsFactor.High;
                     dailyEmissions.Add(new MaxDailyEmission(coalGenerator.Name, day.Date, emission));
                 }
             }

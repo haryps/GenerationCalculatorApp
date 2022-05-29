@@ -1,5 +1,4 @@
-﻿using GenerationCalculatorApp.DataObject.ParserDataObject;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +7,12 @@ using System.Xml.Serialization;
 
 namespace GenerationCalculatorApp.DataObject.ReferenceDataObject
 {
-    public class ReferenceData
+    public class Factors
     {
         [XmlElement]
-        public Factors Factors { get; set; }
+        public ValueFactor ValueFactor { get; set; }
+
+        [XmlElement]
+        public EmissionsFactor EmissionsFactor { get; set; }
     }
 }
