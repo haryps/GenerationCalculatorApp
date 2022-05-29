@@ -7,9 +7,6 @@ namespace GenerationCalculatorApp
     {
         public TData Parse<TData>(string filePath) where TData : class
         {
-            if (filePath == null)
-                throw new ArgumentNullException("File does not exist");
-
             using (StreamReader streamReader = new StreamReader(filePath))
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(TData));
@@ -19,9 +16,6 @@ namespace GenerationCalculatorApp
 
         public void Write<TData>(string filePath, TData data)
         {
-            if (filePath == null)
-                throw new ArgumentNullException("File does not exist");
-
             var xmlWriterSettings = new XmlWriterSettings()
             {
                 Indent = true,
