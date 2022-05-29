@@ -48,9 +48,9 @@ namespace GenerationCalculatorApp.Tests
             List<MaxDailyEmission> actualMaxDailyEmissions = calculator.CalculateHighestDailyEmissions();
             List<MaxDailyEmission> expectedMaxDailyEmissions = new List<MaxDailyEmission>()
             {
-                new MaxDailyEmission("Coal2", new DateTime(2017,1,1,7,0,0), 54),
-                new MaxDailyEmission("Coal1", new DateTime(2017,1,2,7,0,0), 42),
-                new MaxDailyEmission("Coal2", new DateTime(2017,1,3,7,0,0), 54),
+                new MaxDailyEmission("Coal2", new DateTime(2017,1,1,0,0,0), 54),
+                new MaxDailyEmission("Coal1", new DateTime(2017,1,2,0,0,0), 42),
+                new MaxDailyEmission("Coal2", new DateTime(2017,1,3,0,0,0), 54),
             };
             CollectionAssert.AreEqual(expectedMaxDailyEmissions, actualMaxDailyEmissions);
         }

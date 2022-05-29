@@ -5,17 +5,17 @@
       <Name>Wind1</Name>
       <Generation>
         <Day>
-          <Date>2017-01-01T00:00:00+00:00</Date>
+          <Date>2017-01-01T00:00:00</Date>
           <Energy>2</Energy>
           <Price>3</Price>
         </Day>
         <Day>
-          <Date>2017-01-02T00:00:00+00:00</Date>
+          <Date>2017-01-02T00:00:00</Date>
           <Energy>4</Energy>
           <Price>5</Price>
         </Day>
         <Day>
-          <Date>2017-01-03T00:00:00+00:00</Date>
+          <Date>2017-01-03T00:00:00</Date>
           <Energy>6</Energy>
           <Price>7</Price>
         </Day>
@@ -26,17 +26,17 @@
       <Name>Wind2</Name>
       <Generation>
         <Day>
-          <Date>2017-01-01T00:00:00+00:00</Date>
+          <Date>2017-01-01T00:00:00</Date>
           <Energy>2</Energy>
           <Price>4</Price>
         </Day>
         <Day>
-          <Date>2017-01-02T00:00:00+00:00</Date>
+          <Date>2017-01-02T00:00:00</Date>
           <Energy>3</Energy>
           <Price>2</Price>
         </Day>
         <Day>
-          <Date>2017-01-03T00:00:00+00:00</Date>
+          <Date>2017-01-03T00:00:00</Date>
           <Energy>7</Energy>
           <Price>3</Price>
         </Day>
@@ -47,17 +47,17 @@
       <Name>Wind3</Name>
       <Generation>
         <Day>
-          <Date>2017-01-01T00:00:00+00:00</Date>
+          <Date>2017-01-01T00:00:00</Date>
           <Energy>3</Energy>
           <Price>4</Price>
         </Day>
         <Day>
-          <Date>2017-01-02T00:00:00+00:00</Date>
+          <Date>2017-01-02T00:00:00</Date>
           <Energy>6</Energy>
           <Price>5</Price>
         </Day>
         <Day>
-          <Date>2017-01-03T00:00:00+00:00</Date>
+          <Date>2017-01-03T00:00:00</Date>
           <Energy>2</Energy>
           <Price>4</Price>
         </Day>
@@ -70,17 +70,17 @@
       <Name>Gas1</Name>
       <Generation>
         <Day>
-          <Date>2017-01-01T00:00:00+00:00</Date>
+          <Date>2017-01-01T00:00:00</Date>
           <Energy>3</Energy>
           <Price>3</Price>
         </Day>
         <Day>
-          <Date>2017-01-02T00:00:00+00:00</Date>
+          <Date>2017-01-02T00:00:00</Date>
           <Energy>2</Energy>
           <Price>3</Price>
         </Day>
         <Day>
-          <Date>2017-01-03T00:00:00+00:00</Date>
+          <Date>2017-01-03T00:00:00</Date>
           <Energy>5</Energy>
           <Price>3</Price>
         </Day>
@@ -91,17 +91,17 @@
       <Name>Gas2</Name>
       <Generation>
         <Day>
-          <Date>2017-01-01T00:00:00+00:00</Date>
+          <Date>2017-01-01T00:00:00</Date>
           <Energy>1</Energy>
           <Price>9</Price>
         </Day>
         <Day>
-          <Date>2017-01-02T00:00:00+00:00</Date>
+          <Date>2017-01-02T00:00:00</Date>
           <Energy>7</Energy>
           <Price>2</Price>
         </Day>
         <Day>
-          <Date>2017-01-03T00:00:00+00:00</Date>
+          <Date>2017-01-03T00:00:00</Date>
           <Energy>6</Energy>
           <Price>3</Price>
         </Day>
@@ -114,17 +114,17 @@
       <Name>Coal1</Name>
       <Generation>
         <Day>
-          <Date>2017-01-01T00:00:00+00:00</Date>
+          <Date>2017-01-01T00:00:00</Date>
           <Energy>4</Energy>
           <Price>8</Price>
         </Day>
         <Day>
-          <Date>2017-01-02T00:00:00+00:00</Date>
+          <Date>2017-01-02T00:00:00</Date>
           <Energy>7</Energy>
           <Price>5</Price>
         </Day>
         <Day>
-          <Date>2017-01-03T00:00:00+00:00</Date>
+          <Date>2017-01-03T00:00:00</Date>
           <Energy>5</Energy>
           <Price>10</Price>
         </Day>
@@ -137,17 +137,17 @@
       <Name>Coal2</Name>
       <Generation>
         <Day>
-          <Date>2017-01-01T00:00:00+00:00</Date>
+          <Date>2017-01-01T00:00:00</Date>
           <Energy>9</Energy>
           <Price>4</Price>
         </Day>
         <Day>
-          <Date>2017-01-02T00:00:00+00:00</Date>
+          <Date>2017-01-02T00:00:00</Date>
           <Energy>7</Energy>
           <Price>4</Price>
         </Day>
         <Day>
-          <Date>2017-01-03T00:00:00+00:00</Date>
+          <Date>2017-01-03T00:00:00</Date>
           <Energy>9</Energy>
           <Price>8</Price>
         </Day>
