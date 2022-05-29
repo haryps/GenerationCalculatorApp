@@ -20,8 +20,7 @@ namespace GenerationCalculatorApp
         {
             List<TotalGeneration> totalGenerations = new List<TotalGeneration>();
 
-            Dictionary<string, WindGenerator> windGeneratorDict = GenerationReport.WindGenerators.ToDictionary(x => x.Name);
-            foreach (WindGenerator windGenerator in windGeneratorDict.Values)
+            foreach (WindGenerator windGenerator in GenerationReport.WindGenerators)
             {
                 double totalGenerationValue = 0;
                 double factor = windGenerator.Location == "Offshore"
@@ -35,8 +34,7 @@ namespace GenerationCalculatorApp
                 totalGenerations.Add(new TotalGeneration(windGenerator.Name, totalGenerationValue));
             }
 
-            Dictionary<string, GasGenerator> gasGeneratorDict = GenerationReport.GasGenerators.ToDictionary(x => x.Name);
-            foreach (GasGenerator gasGenerator in gasGeneratorDict.Values)
+            foreach (GasGenerator gasGenerator in GenerationReport.GasGenerators)
             {
                 double totalGenerationValue = 0;
                 double factor = ReferenceData.Factors[0].Medium;
@@ -48,8 +46,7 @@ namespace GenerationCalculatorApp
                 totalGenerations.Add(new TotalGeneration(gasGenerator.Name, totalGenerationValue));
             }
 
-            Dictionary<string, CoalGenerator> coalGeneratorDict = GenerationReport.CoalGenerators.ToDictionary(x => x.Name);
-            foreach (CoalGenerator coalGenerator in coalGeneratorDict.Values)
+            foreach (CoalGenerator coalGenerator in GenerationReport.CoalGenerators)
             {
                 double totalGenerationValue = 0;
                 double factor = ReferenceData.Factors[0].Medium;
