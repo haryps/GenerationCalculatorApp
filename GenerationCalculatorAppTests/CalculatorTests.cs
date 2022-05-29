@@ -39,12 +39,7 @@ namespace GenerationCalculatorApp.Tests
                 new TotalGeneration("Coal1",585),
                 new TotalGeneration("Coal2",680),
             };
-            Assert.AreEqual(expectedTotalGenerations.Count, actualTotalGenerations.Count);
-            for (int i = 0; i < actualTotalGenerations.Count; i++)
-            {
-                Assert.AreEqual(actualTotalGenerations[i].Name, expectedTotalGenerations[i].Name);
-                Assert.AreEqual(actualTotalGenerations[i].Total, expectedTotalGenerations[i].Total);
-            }
+            CollectionAssert.AreEqual(expectedTotalGenerations, actualTotalGenerations);
         }
 
         [TestMethod()]
@@ -57,13 +52,7 @@ namespace GenerationCalculatorApp.Tests
                 new MaxDailyEmission("Coal1", new DateTime(2017,1,2,7,0,0), 42),
                 new MaxDailyEmission("Coal2", new DateTime(2017,1,3,7,0,0), 54),
             };
-            Assert.AreEqual(expectedMaxDailyEmissions.Count, actualMaxDailyEmissions.Count);
-            for (int i = 0; i < actualMaxDailyEmissions.Count; i++)
-            {
-                Assert.AreEqual(actualMaxDailyEmissions[i].Name, expectedMaxDailyEmissions[i].Name);
-                Assert.AreEqual(actualMaxDailyEmissions[i].Date, expectedMaxDailyEmissions[i].Date);
-                Assert.AreEqual(actualMaxDailyEmissions[i].Emission, expectedMaxDailyEmissions[i].Emission);
-            }
+            CollectionAssert.AreEqual(expectedMaxDailyEmissions, actualMaxDailyEmissions);
         }
 
         [TestMethod()]
@@ -75,12 +64,7 @@ namespace GenerationCalculatorApp.Tests
                 new ActualHeatRate("Coal1", 0.5),
                 new ActualHeatRate("Coal2", 0.75),
             };
-            Assert.AreEqual(expectedActualHeatRates.Count, actualActualHeatRates.Count);
-            for (int i = 0; i < actualActualHeatRates.Count; i++)
-            {
-                Assert.AreEqual(actualActualHeatRates[i].Name, expectedActualHeatRates[i].Name);
-                Assert.AreEqual(actualActualHeatRates[i].HeatRate, expectedActualHeatRates[i].HeatRate);
-            }
+            CollectionAssert.AreEqual(expectedActualHeatRates, actualActualHeatRates);
         }
     }
 }

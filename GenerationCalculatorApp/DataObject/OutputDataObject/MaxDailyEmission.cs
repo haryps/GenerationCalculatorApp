@@ -22,5 +22,15 @@ namespace GenerationCalculatorApp.DataObject.OutputDataObject
         public MaxDailyEmission()
         {
         }
+
+        public override bool Equals(object? obj)
+        {
+            MaxDailyEmission maxDailyEmission = obj as MaxDailyEmission;
+            if (maxDailyEmission == null)
+                return false;
+
+            return maxDailyEmission.Name.Equals(Name) && maxDailyEmission.Date == Date && maxDailyEmission.Emission == Emission;
+
+        }
     }
 }

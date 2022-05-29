@@ -20,5 +20,14 @@ namespace GenerationCalculatorApp.DataObject.OutputDataObject
         public ActualHeatRate()
         {
         }
+
+        public override bool Equals(object? obj)
+        {
+            ActualHeatRate actualHeatRate = obj as ActualHeatRate;
+            if (actualHeatRate == null)
+                return false;
+
+            return actualHeatRate.Name.Equals(Name) && actualHeatRate.HeatRate == HeatRate;
+        }
     }
 }

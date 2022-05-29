@@ -20,5 +20,14 @@ namespace GenerationCalculatorApp.DataObject.OutputDataObject
         public TotalGeneration()
         {
         }
+
+        public override bool Equals(object? obj)
+        {
+            TotalGeneration totalGeneration = obj as TotalGeneration;
+            if (totalGeneration == null)
+                return false;
+
+            return totalGeneration.Name == Name && totalGeneration.Total == Total;
+        }
     }
 }
