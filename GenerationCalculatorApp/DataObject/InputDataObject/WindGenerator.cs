@@ -4,6 +4,6 @@ namespace GenerationCalculatorApp.DataObject.ParserDataObject
 {
     public class WindGenerator : Generator
     {
-        public string Location { get; set; }
+        public Location Location { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using GenerationCalculatorApp.DataObject.ReferenceDataObject;
 
 namespace GenerationCalculatorApp
 {
-    internal class Calculator
+    public class Calculator
     {
         public GenerationReport GenerationReport { get; }
         public ReferenceData ReferenceData { get; }
@@ -16,14 +16,14 @@ namespace GenerationCalculatorApp
             ReferenceData = referenceData;
         }
 
-        internal List<TotalGeneration> CalculateTotalGenerationValue()
+        public List<TotalGeneration> CalculateTotalGenerationValue()
         {
             List<TotalGeneration> totalGenerations = new List<TotalGeneration>();
 
             foreach (WindGenerator windGenerator in GenerationReport.WindGenerators)
             {
                 double totalGenerationValue = 0;
-                double factor = windGenerator.Location == "Offshore"
+                double factor = windGenerator.Location == Location.Offshore
                     ? ReferenceData.Factors[0].Low
                     : ReferenceData.Factors[0].High;
                 foreach (Day day in windGenerator.Days)
@@ -61,7 +61,7 @@ namespace GenerationCalculatorApp
             return totalGenerations;
         }
 
-        internal List<MaxDailyEmission> CalculateHighestDailyEmissions()
+        public List<MaxDailyEmission> CalculateHighestDailyEmissions()
         {
             List<MaxDailyEmission> dailyEmissions = new List<MaxDailyEmission>();
 
@@ -94,7 +94,7 @@ namespace GenerationCalculatorApp
             return dailyMaxEmissions;
         }
 
-        internal List<ActualHeatRate> CalculateActualHeatRate()
+        public List<ActualHeatRate> CalculateActualHeatRate()
         {
             List<ActualHeatRate> actualHeatRates = new List<ActualHeatRate>();
 
